@@ -9,6 +9,10 @@ A copy of Dave Dunfield's too that can be used as a "bootstrap" for creating sys
 A program that runs under CP/M on the Cromemco in MBASIC. It prints a test pattern (using the OUT command, so no device driver is needed) to the console or either of the serial ports on a TU-ART card. It assumes the console port is initialized, but will initialize and set the baud rate to 9600 for the TU-ART ports.
 
 
+## TUECHO.BAS
+A program that runs under CP/M on the Cromemco in MBASIC. It echos input to a TU-ART serial port back out to the port. The port is initialized to 9600 baud, an "activity indicator" (dots on the screen) is shown, and when a carriage return ($13) is entered an additional line feed ($10) is automatically echoed.
+
+
 ## TUTEST.BAS
 A program in Cromemco BASIC under CDOS that tests Device B on the TU-ART card. (By default, set at port 0x50.) You can change settings for baud rates and such based on the manual.
 
