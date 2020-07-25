@@ -8,6 +8,8 @@ A copy of Dave Dunfield's too that can be used as a "bootstrap" for creating sys
 ## SOTEST.BAS
 A program that runs under CP/M on the Cromemco in MBASIC. It prints a test pattern (using the OUT command, so no device driver is needed) to the console or either of the serial ports on a TU-ART card. It assumes the console port is initialized, but will initialize and set the baud rate to 9600 for the TU-ART ports.
 
+I have modified this to use integers and check for a key stroke to make it compatible with BASCOM. It seems to work fine compiled and stays under 2K in size since there is only interger math functions used. I'll admit that 9600 baud with the compiled version seems to move along the screen a lot faster than it does running under the interpreter.
+
 
 ## TUECHO.BAS
 A program that runs under CP/M on the Cromemco in MBASIC. It echos input to a TU-ART serial port back out to the port. The port is initialized to 9600 baud, an "activity indicator" (dots on the screen) is shown, and when a carriage return ($13) is entered an additional line feed ($10) is automatically echoed.
