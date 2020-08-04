@@ -1,6 +1,10 @@
 # Cromemco
 Various items related to vintage Cromemco systems and software. Several of these were used for testing and diagnostics as I initially brought the system up. I have cleaned them up a bit and kept them here in case they are needed for future troubleshooting.
 
+## 256KZ Memory Card
+A variety of information about getting a Cromemco 256KZ card up and running. Includes its own README file.
+
+
 ## CROMRT.ZIP
 A copy of Dave Dunfield's too that can be used as a "bootstrap" for creating system disks over the serial link to a Cromemco system running RDOS 2.5x. Tools for initially formating a disk and several images are included. A utility that allows conversion of other disk image formats to "binary" is also included.
 
@@ -18,13 +22,6 @@ A program that runs under CP/M on the Cromemco in MBASIC. It echos input to a TU
 ## TUTEST.BAS
 A program in Cromemco BASIC under CDOS that tests Device B on the TU-ART card. (By default, set at port 0x50.) You can change settings for baud rates and such based on the manual.
 
-
-## 256KZ Memory Card
-When looking for a spare memory card for my Cromemco Z-2D, I ended up with a 64KZ with a failed voltage regulator. Basically, that seems to have pretty much fried the card (although I still hope to repair it one day). Looking more, several 256KZ cards were up for auction and at prices lower than the 64KZ. Four times the memory (even if I didn't need it for my work with the Z80) at a lower price seemed like a great opportunity and I bought one of the boards.
-
-And then I figured out why they tended to be cheaper...
-
-![Header as PROM replacement](https://raw.githubusercontent.com/w4jbm/Cromemco/master/256KZ/header.jpg)
 
 ## And the fine print...
 The copyright for some of these files are held by others and subject to various terms and conditions. I have tried to recognize those involved and have left any notices or attribution in place with the files used.
