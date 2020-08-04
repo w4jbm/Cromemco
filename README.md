@@ -19,6 +19,9 @@ A program that runs under CP/M on the Cromemco in MBASIC. It echos input to a TU
 A program in Cromemco BASIC under CDOS that tests Device B on the TU-ART card. (By default, set at port 0x50.) You can change settings for baud rates and such based on the manual.
 
 
+# 256KZ Memory Card
+![Header as PROM replacement](https://raw.githubusercontent.com/w4jbm/Cromemco/master/256KZ/header.jpg)
+
 ## And the fine print...
 The copyright for some of these files are held by others and subject to various terms and conditions. I have tried to recognize those involved and have left any notices or attribution in place with the files used.
 
