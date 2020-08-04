@@ -19,7 +19,11 @@ A program that runs under CP/M on the Cromemco in MBASIC. It echos input to a TU
 A program in Cromemco BASIC under CDOS that tests Device B on the TU-ART card. (By default, set at port 0x50.) You can change settings for baud rates and such based on the manual.
 
 
-# 256KZ Memory Card
+## 256KZ Memory Card
+When looking for a spare memory card for my Cromemco Z-2D, I ended up with a 64KZ with a failed voltage regulator. Basically, that seems to have pretty much fried the card (although I still hope to repair it one day). Looking more, several 256KZ cards were up for auction and at prices lower than the 64KZ. Four times the memory (even if I didn't need it for my work with the Z80) at a lower price seemed like a great opportunity and I bought one of the boards.
+
+And then I figured out why they tended to be cheaper...
+
 ![Header as PROM replacement](https://raw.githubusercontent.com/w4jbm/Cromemco/master/256KZ/header.jpg)
 
 ## And the fine print...
