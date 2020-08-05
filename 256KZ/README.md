@@ -41,4 +41,6 @@ Reason: 1-6) Improves drive and timing control of PRDY.
            Improves timing margin of REFRESH clear condition at
            the end of a refresh cycle.
 ```
-The hex dump of the 74947 was also provided.
+The hex dump of the 74947 was also provided. Note that with the default PROM, attempts to select Banks 4, 5, and 6 "fail" and, instead, select Bank 0. There is also logic on the board that helps handle Bank 7. As best I can see at this point, it looks like reads from Bank 7 pull data from Bank 0 while writes to Bank 0 go to all available banks. (This is necessary so that banks can be initialized prior to having the processor switch into them.) The default logic and configuration seems to be to have any unused Bank between 1 to 6 default to Bank 0 if there is an attempt to select it.
+
+
