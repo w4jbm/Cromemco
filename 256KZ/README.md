@@ -10,3 +10,35 @@ For 8-bit systems IC39, a 256 location (8 bit address), 1 nibble (4 bit) bipolar
 It turned out that the board I received had no PROM making it useless in my Z80 system. After some studying of the schematic and information from members of the Cromemco e-mail group, I figured out a way that let me simply strap the memory card so that Bank 0 was always selected and that the upper 32K was enabled as it typically is when Bank 0 was selected. (The lower 32K is always present on the Bank 0 memory card to allow the Z80 to boot-strap bringing up the 68000 system.) Below is a picture of the DIP header with the necessary resistors allowing use of the card:
 
 ![Header as PROM replacement](https://raw.githubusercontent.com/w4jbm/Cromemco/master/256KZ/header.jpg)
+
+There is a bit of bodge wire on the board that seems to be factory installed. MikeS on the Cromemco mailing list provided details from the the official bulletin which covers Mod Level 2:
+
+```
+Mod Level 1      Reference #              Date Released 10/25/82
+-----------------------------------------------------------------------
+Change: 1) Add two 1.5 kohm resistors (001-0020): one from pin 4
+           to pin 8 of IC38 and one from pin 13 of IC38 to ground
+           strip under "C40" (component side).
+ 
+Reason: 1) Allows board to be configured for Extended-Address-Only
+           by removing the Bank Select PROM (IC39).  Default
+           systems (DPU, CROMIX 20.XX) with multiple 256KZ's can
+           now be configured with one board having a PROM and the
+           other boards with XADD switches set accordingly.
+ 
+Mod Level 2      Reference #              Date Released 12/20/82
+-----------------------------------------------------------------------
+Change: 1) Change IC2 from a 74LS169 (010-0144) to a 74S169(010-0304).
+        2) Change IC41 from a 74LS03 (010-0067) to a 7438 (010-0192).
+        3) Component side: Cut trace from IC20 pin 12 to IC2 pin 9;
+           jump IC2 pin 9 to IC41 pin 13.
+        4) Bend out pin 7 of IC2 and jump to IC1 pin 12.
+        5) Change IC63 from a 74LS00 (010-0069) to a 74S00(010-0036).
+        6) Solder side: Cut trace from IC48 pin 6 to IC47 pin 9 and
+           jump IC47 pin 10 to IC47 pin 9.
+ 
+Reason: 1-6) Improves drive and timing control of PRDY.
+           Improves timing margin of REFRESH clear condition at
+           the end of a refresh cycle.
+```
+The hex dump of the 74947 was also provided.
