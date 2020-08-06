@@ -12,7 +12,13 @@ The beginning of everything is making sure you can get to RDOS and that you are 
 
 `Preparing to boot, ESC to abort`
 
-If you presse the ESCAPE key, you should see the semicolon (";") prompt. Initially it is good to use the 
+If you presse the ESCAPE key, you should see the semicolon (";") prompt. Initially it is good to use the Test command by typing "T".
+
+On bootup, the typical Cromemco will have the 16FDC's ROM mapped into memory at C000H. The ZPU card is normally configured to jump to C000H on startup. This is how RDOS gets started. The Cromemco memory cards are usually set to support up to 7 "Banks" each having up to 64K of RAM. On startup, typically Bank 0 will be mapped in with the lower 32K enabled and the upper 32K dissabled.
+
+The "T" command will copy RDOS from C000H into lower memory, use an OUT 40,1 command to select Bank 0 (which also enables the upper 32K of RAM), copies RDOS back up to C000H (which is now RAM) and returns control to the RAM copy of RDOS.
+
+At that point it will perform a quick test to determine how much memory is available to the system.
 
 WORK IN PROGRESS
 
