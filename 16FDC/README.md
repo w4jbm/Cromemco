@@ -1,4 +1,4 @@
-# 16FDC Disk Controller Card
+# Cromemco 16FDC Disk Controller Card
 
 The 16FDC card includes a disk controller capable of directly selecting up to four drive (which would typically have beeen 8" or 5.25" drives) up to Dual Density/Double Sided (DD/DS) capacity.
 
