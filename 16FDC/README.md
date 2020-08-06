@@ -8,7 +8,11 @@ I'm documenting this in case I ever need to go through it again and assume that 
 
 For a while, I worked with the Tandom TM100 5.25" DD/DS drives that were installed in my Cromemco Z-2D. Knowing what I know now, if I was starting over and didn't have any 5.25" disks I wanted to retrieve the contents of, I would start with 3.5" drives. Most of this is a "walk through" of how I would suggest going about getting a system running.
 
-The beginning of everything is making sure you can get to RDOS and that you are running v2.51. When you power the system up, press the enter key on the serial terminal a few times. You should see a message...
+The beginning of everything is making sure you can get to RDOS and that you are running v2.51. When you power the system up, press the enter key on the serial terminal a few times. You should see a message:
+
+`Preparing to boot, ESC to abort`
+
+If you presse the ESCAPE key, you should see the semicolon (";") prompt. Initially it is good to use the 
 
 WORK IN PROGRESS
 
